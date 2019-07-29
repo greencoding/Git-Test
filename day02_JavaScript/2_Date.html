@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期对象</title>
+    <script>
+        /**
+         * 不初始化默认为0
+         * @type {Date}
+         */
+        var today = new Date();
+        var d1 = new Date("October 13, 1975 11:13:00");
+        var d2 = new Date(79,5,24);
+        var d3 = new Date(79,5,24,11,33,0);
+        document.write(today + "<br>");
+        document.write(today.toLocaleDateString() +today.toLocaleTimeString() +  "<br>");
+        document.write(d1 + "<br>");
+        document.write(d2 + "<br>");
+        document.write(d3+ "<br>");
+
+        // Math对象不用创建直接使用
+        document.write(Math.PI + "<br>");
+        document.write(Math.round(100 *Math.random()) + "<br>")//包含0不包含1
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

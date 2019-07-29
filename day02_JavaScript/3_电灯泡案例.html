@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电灯泡</title>
+</head>
+<body>
+
+<!--<img id="closed_light" src="img/off.gif" onclick="light_on()">-->
+<img id="closed_light" src="img/off.gif" >
+
+<script>
+    var light = document.getElementById("closed_light");
+    var flag = 0;
+    // function light_on () {
+    //
+    //
+    //     if (flag % 2 === 0) {
+    //         light.src = "img/on.gif";
+    //         flag++;
+    //     }
+    //     else if (flag % 2 === 1){
+    //         light.src = "img/off.gif";
+    //         flag++;
+    //     }
+    // }
+
+    light.onclick = function() {
+
+        if (flag % 2 === 0) {
+            light.src = "img/on.gif";
+            flag++;
+        }
+        else if (flag % 2 === 1){
+            light.src = "img/off.gif";
+            flag++;
+        }
+    }
+</script>
+
+
+
+</body>
+</html>

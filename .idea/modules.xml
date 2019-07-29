@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/day01_html&amp;css/day01_html&amp;css.iml" filepath="$PROJECT_DIR$/day01_html&amp;css/day01_html&amp;css.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day02_JavaScript/day02_JavaScript.iml" filepath="$PROJECT_DIR$/day02_JavaScript/day02_JavaScript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day03_BootStrap/day03_BootStrap.iml" filepath="$PROJECT_DIR$/day03_BootStrap/day03_BootStrap.iml" />
+    </modules>
+  </component>
+</project>

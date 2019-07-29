@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window对象</title>
+</head>
+<body>
+
+<input  id="openbt" type="button" value="开启新页面">
+<input  id="colsebt" type="button" value="关闭页面">
+
+<script>
+    // var b = confirm("你是吗?");
+    // if(b){
+    //     alert("欢迎下次光临！")
+    // }else{
+    //     alert("手别抖！")
+    // }
+    //
+    // confirm("请输入密码")
+    var elementById = document.getElementById("openbt");
+    var  newWindow;
+    elementById.onclick = function () {
+        newWindow = open("Https://www.baidu.com");
+    }
+
+    var elementById1 = document.getElementById("colsebt");
+    elementById1.onclick = function () {
+        close()
+    }
+</script>
+</body>
+</html>

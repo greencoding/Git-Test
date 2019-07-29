@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格</title>
+    <STYLE>
+        .input{
+            text-align: center;
+            margin-top: 50px;
+        }
+        h3{
+            text-align: center;
+            margin-top: 50px;
+        }
+        #table{
+            margin: auto;
+            width: 50%;
+            border: 1px solid;
+        }
+        tr,td{
+            border:1px solid;
+            text-align:center;
+        }
+    </STYLE>
+</head>
+<body>
+<form method="post">
+    <div class="input">
+        <input id="text1" type="text" name="编号" placeholder="请输入编号">
+        <input id="text2" type="text" name="姓名" placeholder="请输入姓名">
+        <input id="text3" type="text" name="性别" placeholder="请输入性别">
+        <input id="bt" type="button" value="添加">
+    </div>
+</form>
+    <div class="table_student">
+        <h3> 学生信息表 </h3>
+    <table id="table" >
+        <tr >
+            <td>编号</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>操作</td>
+        </tr>
+        <tr >
+            <td>1</td>
+            <td>德玛西亚</td>
+            <td>男</td>
+            <td><a href="javascript:void(0);" onclick="delTr(this)">删除</a></td>
+        </tr>
+        <tr >
+            <td>2</td>
+            <td>卡特琳娜</td>
+            <td>女</td>
+            <td><a href="javascript:void(0);" onclick="delTr(this)">删除</a></td>
+        </tr>
+    </table>
+
+    </div>
+    <script>
+        // var bt = document.getElementById("bt");
+        // bt.onclick = function () {
+        //     //获取文本框的内容
+        //     var id = document.getElementById("text1").value;
+        //     var name = document.getElementById("text2").value;
+        //     var gender = document.getElementById("text3").value;
+        //     //创建td
+        //     var td1 = document.createElement("td");
+        //     var text_id = document.createTextNode(id);
+        //     td1.appendChild(text_id);
+        //     var td2 = document.createElement("td");
+        //     var text_name = document.createTextNode(name);
+        //     td2.appendChild(text_name);
+        //     var td3 = document.createElement("td");
+        //     var text_gender = document.createTextNode(gender);
+        //     td3.appendChild(text_gender);
+        //     var td4 = document.createElement("td");
+        //     var ele_a = document.createElement("a");
+        //     ele_a.setAttribute("href","javascript:void(0);");
+        //     ele_a.setAttribute("onclick","delTr(this);");
+        //     var text_delete = document.createTextNode("删除");
+        //     td4.appendChild(ele_a);
+        //     ele_a.appendChild(text_delete);
+        //     //创建tr
+        //     var tr = document.createElement("tr");
+        //     //添加td到tr中
+        //     tr.appendChild(td1);
+        //     tr.appendChild(td2);
+        //     tr.appendChild(td3);
+        //     tr.appendChild(td4);
+        //     //获取table
+        //     var table = document.getElementById("table");
+        //     table.appendChild(tr);
+        // };
+
+        //使用innerHTML进行添加
+        var bt = document.getElementById("bt");
+        bt.onclick = function () {
+            //获取文本框的内容
+            var id = document.getElementById("text1").value;
+            var name = document.getElementById("text2").value;
+            var gender = document.getElementById("text3").value;
+
+            var table = document.getElementById("table");
+            table.innerHTML += "<tr >\n" +
+                "<td>" + id + "</td>\n" +
+                "<td>" + name + "</td>\n" +
+                "<td>" + gender + "</td>\n" +
+                "<td><a href=\"javascript:void(0);\" onclick=\"delTr(this)\">删除</a></td>\n" +
+                "</tr>";
+        };
+
+        // //确定点击的是哪一个超链接
+        // <td><a href="javascript:void(0);" onclick="delTr(this)">删除</a></td>
+
+        // 怎么删除
+        // 通过父节点删除子节点removeChild();
+        //删除方法
+        function delTr(obj) {
+            var  table = obj.parentNode.parentNode.parentNode;
+            var  tr = obj.parentNode.parentNode;
+            table.removeChild(tr);
+        }
+    </script>
+</body>
+</html>
